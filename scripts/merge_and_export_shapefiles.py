@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 def main():
     temp_dir = '../data/ABPOGB_CSV/temp'
-    output_shapefile = '../data/ABPOGB_CSV/residential_addresses.shp'
+    output_shapefile = '../data/residential_addresses.shp'
     
     # Load all temporary shapefiles
     print("Loading temporary shapefiles...")

@@ -8,7 +8,7 @@ def main():
     oa_shapefile = '../data/Output_Areas_2021/OA_2021.shp'
     population_csv = '../data/oa_age_bands.csv'
     national_parks_shapefile = '../data/National_Parks_(England)___Natural_England.shp'
-    residential_addresses_shapefile = '../data/ABPOGB_CSV/residential_addresses.shp'
+    residential_addresses_shapefile = '../data/residential_addresses.shp'
     
     # Load shapefiles and CSV
     print("Loading shapefiles and CSV...")
@@ -76,7 +76,7 @@ def main():
     intersecting_oa_gdf['address_outside'] = intersecting_oa_gdf['total_addresses'] - intersecting_oa_gdf['address_inside']
     
     # Export the result to a new shapefile
-    output_shapefile = '../data/ABPOGB_CSV/output_area_population.shp'
+    output_shapefile = '../data/output_area_population.shp'
     print(f"Exporting results to {output_shapefile}...")
     intersecting_oa_gdf.to_file(output_shapefile, driver='ESRI Shapefile')
     print("Script completed successfully!")
